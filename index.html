@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+</head>
+
+<body>
+<script type="text/javascript">
+var exampleData = [
+	[
+		" ",
+		"Example1",
+		"Author1"
+	],
+	[
+		" ",
+		"Example2",
+		"Author2"
+	],
+	[
+		" ",
+		"Example3",
+		"Author1"
+	],
+	[
+		" ",
+		"Example1",
+		"Author1"
+	],
+	[
+		" ",
+		"Example1",
+		"Author1"
+	],
+	[
+		" ",
+		"Example1",
+		"Author1"
+	],
+	[
+		" ",
+		"Example1",
+		"Author1"
+	],
+	[
+		" ",
+		"Example1",
+		"Author1"
+	],
+]
+
+function glossExample(videoPath, name, author){
+	this.__videoPath = videoPath;
+	this.__name = name;
+	this.__author = author;
+}
+
+function appendExample(example, whereToAppend){
+	$(".container").append("\
+		<div class=\"example\" id=\"" + example.__name + "\">\
+			<div class=\"picture\">\
+				<img src=\"images/eg1.png\" />\
+			</div>\
+			<div class=\"info\">\
+				<p class=\"name\">" + example.__name + "</p>\
+				<p class=\"author\">" + example.__author + "</p>\
+				<p class=\"video\"><a href=\"" + example.__videoPath + "\">Play</a></p>\
+			</div>\
+		</div>"
+	)
+}
+
+$(document).ready(function(){
+	//append all examples to html
+	for(var i=0; i<15; i++){
+		//var example = new glossExample(exampleData[i][0],exampleData[i][1],exampleData[i][2]);
+		var example = new glossExample(" ","Example"+(i+1),"Author"+(i+1));
+		appendExample(example, ".container");
+	}
+
+	//hover effect
+	$(".example").hover(
+		function() {
+			exampleId = "#" + $(this).attr('id');
+			$(exampleId + " .info").fadeIn("fast");
+		}, function() {
+			$(exampleId + " .info").fadeOut("fast");
+		}
+	)
+
+})
+</script>
+	<div class="container">
+
+	</div>
+
+
+	<!-- prettyPhoto- pop up video -->
+	<script type="text/javascript" charset="utf-8">
+	    $(document).ready(function(){
+	        $("a[rel^='prettyPhoto']").prettyPhoto({
+	            default_width: 720,
+	            default_height: 544,
+	            theme: 'pp_default'
+	        });
+	    });
+	</script>
+	<!--  -->
+
+</body>
+</html>
