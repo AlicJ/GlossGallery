@@ -60,7 +60,7 @@ function glossExample(videoPath, name, author){
 }
 
 function appendExample(example, whereToAppend){
-	$(".container").append("\
+	$(whereToAppend).append("\
 		<div class=\"example\" id=\"" + example.__name + "\">\
 			<div class=\"picture\">\
 				<img src=\"images/" + example.__name + ".png\" />\
@@ -76,10 +76,19 @@ function appendExample(example, whereToAppend){
 
 $(document).ready(function(){
 	//append all examples to html
+	var countExample = 0;
 	for(var i=0; i<exampleData.length; i++){
+		//if maximum of 6 examples is reached, cerate aother container
+		if(countExample % 6 == 0){
+			$(".container").append("<div class=\"container" + (countExample/6) + "\"></div>");
+		}
+		//create the example object
 		var example = new glossExample(exampleData[i][0],exampleData[i][1],exampleData[i][2]);
 		//var example = new glossExample(" ","Example"+(i+1),"Author"+(i+1));
-		appendExample(example, ".container");
+		appendExample(example, ".container" + String(countExample/6));
+		console.log(example)
+		countExample ++;
+
 	}
 
 	//hover effect
@@ -100,17 +109,18 @@ $(document).ready(function(){
 	</div>
 
 
-	<!-- prettyPhoto- pop up video -->
-	<script type="text/javascript" charset="utf-8">
-	    $(document).ready(function(){
-	        $("a[rel^='prettyPhoto']").prettyPhoto({
-	            default_width: 720,
-	            default_height: 544,
-	            theme: 'pp_default'
-	        });
-	    });
-	</script>
-	<!--  -->
+<!-- prettyPhoto- pop up video -->
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+        $("a[rel^='prettyPhoto']").prettyPhoto({
+            default_width: 720,
+            default_height: 544,
+            theme: 'pp_default',
+            social_tools: " "
+        });
+    });
+</script>
+<!--  -->
 
 </body>
 </html>
