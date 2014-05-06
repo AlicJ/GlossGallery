@@ -51,6 +51,56 @@ var exampleData = [
 		"Windows",
 		"Chang Liu,Xiaomin Bai, Yu Wang"
 	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
+	[
+		"http://youtu.be/9OeeomwC6LY",
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
+	],
 ]
 
 function glossExample(videoPath, name, author){
@@ -77,17 +127,17 @@ function appendExample(example, whereToAppend){
 $(document).ready(function(){
 	//append all examples to html
 	var countExample = 0;
-	var classCount = 0;
+	var pageCount = 0;
 	for(var i=0; i<exampleData.length; i++){
 		//if maximum of 6 examples is reached, cerate aother container
 		if(countExample % 6 == 0){
-			$(".container").append("<div class=\"subcontainer num" + (countExample/6) + "\"></div>");
-			classCount = countExample/6;
+			$(".container").append("<div class=\"subcontainer page" + (countExample/6) + "\"></div>");
+			pageCount = countExample/6;
 		}
 		//create the example object
 		var example = new glossExample(exampleData[i][0],exampleData[i][1],exampleData[i][2]);
 		//var example = new glossExample(" ","Example"+(i+1),"Author"+(i+1));
-		appendExample(example, ".num" + String(classCount));
+		appendExample(example, ".page" + String(pageCount));
 		console.log(example)
 		countExample ++;
 
@@ -104,8 +154,15 @@ $(document).ready(function(){
 		}
 	)
 
+	//hide other pages(subcontainers)
+	for(i=1; i<=pageCount; i++){
+		$(".page"+i).hide();
+	}
+
+
 })
 </script>
+
 	<div class="container">
 
 	</div>
