@@ -87,6 +87,7 @@ $(document).ready(function(){
 		function() {
 			exampleId = "#" + $(this).attr('id');
 			$(exampleId + " .info").fadeIn("fast");
+			$(exampleId + " .info").css("display", "table-cell");
 		}, function() {
 			$(exampleId + " .info").fadeOut("fast");
 		}
