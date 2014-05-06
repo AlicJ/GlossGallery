@@ -138,13 +138,13 @@ $(document).ready(function(){
 		}
 	)
 
-	$(".scroll").fadeTo("fast", 0.6);
+	$(".scroll").fadeTo("fast", 1);
 
 	$(".scroll").hover(
 		function(){
-			$(this).fadeTo("fast", 1);
-		},function(){
 			$(this).fadeTo("fast", 0.6);
+		},function(){
+			$(this).fadeTo("fast", 1);
 		}
 	)
 
