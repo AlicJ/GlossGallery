@@ -79,6 +79,8 @@ $(document).ready(function(){
 	//append all examples to html
 	var countExample = 0;
 	var pageCount = 0;
+	var presentPageNum = 0
+
 	for(var i=0; i<exampleData.length; i++){
 		//if maximum of 6 examples is reached, cerate aother container
 		if(countExample % 6 == 0){
@@ -98,6 +100,30 @@ $(document).ready(function(){
 	for(i=1; i<=pageCount; i++){
 		$(".page"+i).hide();
 	}
+	//next page
+	$(".right").click(function(){
+		$(".page"+presentPageNum).hide()
+
+		if(presentPageNum<pageCount){
+			presentPageNum ++;
+		}else{
+			presentPageNum = 0;
+		}
+
+		$(".page"+presentPageNum).show()
+	})
+	//previous page
+	$(".left").click(function(){
+		$(".page"+presentPageNum).hide()
+
+		if(presentPageNum!=0){
+			presentPageNum --;
+		}else{
+			presentPageNum = pageCount;
+		}
+
+		$(".page"+presentPageNum).show()
+	})
 
 	//hover effect
 	$(".example").hover(
