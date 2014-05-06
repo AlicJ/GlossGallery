@@ -1,6 +1,6 @@
 body {
 	margin: 0 auto;
-	overflow: hidden;
+	overflow:;
 }
 
 a {
@@ -19,7 +19,7 @@ a {
 	height: 220px;
 	text-align: center;
 	float: left;
-	margin:50px 10px 10px 70px;
+	margin:50px 25px 10px 25px;
 }
 
 .picture {
@@ -52,4 +52,18 @@ a {
 .subcontainer {
 	width: 960px;
 	height: 600px;
+}
+
+.scroll {
+	height: 600px;
+	width: 75px;
+	background: #CCC;
+}
+
+.scroll.left{
+	float: left;
+}
+
+.scroll.right{
+	float: right;
 }
