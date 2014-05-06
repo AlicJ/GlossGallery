@@ -54,6 +54,7 @@ a {
 	height: 190px;
 	width: 170px;
 	display: none;
+	border-radius: 10px;
 	background-color: rgba(255,255,255,0.88);
 	border-radius: 10px;
 }
