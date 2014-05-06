@@ -77,6 +77,11 @@ a {
 	margin: 10px auto;
 }
 
+.video a {
+	display: block;
+	line-height: 35px;
+}
+
 .subcontainer {
 	width: 960px;
 	height: 600px;
@@ -89,6 +94,7 @@ a {
 	font-size: 64px;
 	text-align: center;
 	padding-top: 268px;
+	cursor: pointer;
 }
 
 .scroll.left{
