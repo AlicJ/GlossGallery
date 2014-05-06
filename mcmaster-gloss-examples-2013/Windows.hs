@@ -12,10 +12,10 @@ circ time= ThickCircle (5*(cos ((pi/3)*time))) (10*(cos((pi/3)*time)))
 pre = \time ->
 	Pictures[
 		--bubble moving around and come to middle
-		Color (mBlue time) (Translate ((-55) * (cos (pi+time*4*pi/9))) (50+(55 * (sin ((3*pi/2) + time*13*pi/18)))) (circ time)),
-		Color (mRed time) (Translate ((-55) * (cos (pi+time*4*pi/9))) ((-55) * (sin ((3*pi/2) + time*13*pi/18))) (circ time)),
-		Color (mGreen time) (Translate (55 * (cos (pi+time*4*pi/9))) ((-55) * (sin ((3*pi/2) + time*13*pi/18))) (circ time)),
-		Color (mYellow time) (Translate (55 * (cos (pi+time*4*pi/9))) (55+(55 * (sin ((3*pi/2) + time*13*pi/18)))) (circ time)),
+		Color (mBlue time) (Translate ((-55) * (cos (pi+(time/4)*4*pi/9))) (50+(55 * (sin ((3*pi/2) + (time/4)*13*pi/18)))) (circ time)),
+		Color (mRed time) (Translate ((-55) * (cos (pi+(time/4)*4*pi/9))) ((-55) * (sin ((3*pi/2) + (time/4)*13*pi/18))) (circ time)),
+		Color (mGreen time) (Translate (55 * (cos (pi+(time/4)*4*pi/9))) ((-55) * (sin ((3*pi/2) + (time/4)*13*pi/18))) (circ time)),
+		Color (mYellow time) (Translate (55 * (cos (pi+(time/4)*pi/9))) (55+(55 * (sin ((3*pi/2) + (time/4)*13*pi/18)))) (circ time)),
 		--the text under the logo
 		Color (white) (Translate (-165) (-110)(Scale (0.3)(0.3)(Text "Starting Windows")))]
 --windows

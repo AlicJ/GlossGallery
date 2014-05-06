@@ -13,43 +13,43 @@
 var exampleData = [
 	[
 		" ",
-		"Example1",
-		"Author1"
+		"HauntedHouse",
+		"Mackenzie Campbell, Manaar Hyder and Maya Ramamurthy"
 	],
 	[
 		" ",
-		"Example2",
-		"Author2"
+		"MovingStar",
+		"Ahmed Khan, MATTHEW PRIOR-COXHEAD"
 	],
 	[
 		" ",
-		"Example3",
-		"Author1"
+		"Parabolic",
+		"Zichen Jiang, Yi Wang"
 	],
 	[
 		" ",
-		"Example1",
-		"Author1"
+		"SolarSystem",
+		"Trevor Rae, Paul Warnick, James Zhu, Katrine Rachitsky"
 	],
 	[
 		" ",
-		"Example1",
-		"Author1"
+		"Stare",
+		"Mingfei Jiang"
 	],
 	[
 		" ",
-		"Example1",
-		"Author1"
+		"Waves",
+		"Sergio Cosman Agraz"
 	],
 	[
 		" ",
-		"Example1",
-		"Author1"
+		"Windmills",
+		"Yash Patel, Chinthujan Nandakumar"
 	],
 	[
 		" ",
-		"Example1",
-		"Author1"
+		"Windows",
+		"Chang Liu,Xiaomin Bai, Yu Wang"
 	],
 ]
 
@@ -76,9 +76,9 @@ function appendExample(example, whereToAppend){
 
 $(document).ready(function(){
 	//append all examples to html
-	for(var i=0; i<15; i++){
-		//var example = new glossExample(exampleData[i][0],exampleData[i][1],exampleData[i][2]);
-		var example = new glossExample(" ","Example"+(i+1),"Author"+(i+1));
+	for(var i=0; i<exampleData.length; i++){
+		var example = new glossExample(exampleData[i][0],exampleData[i][1],exampleData[i][2]);
+		//var example = new glossExample(" ","Example"+(i+1),"Author"+(i+1));
 		appendExample(example, ".container");
 	}
 
