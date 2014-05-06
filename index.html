@@ -51,56 +51,7 @@ var exampleData = [
 		"Windows",
 		"Chang Liu,Xiaomin Bai, Yu Wang"
 	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
+
 ]
 
 function glossExample(videoPath, name, author){
@@ -143,6 +94,11 @@ $(document).ready(function(){
 
 	}
 
+	//hide other pages(subcontainers)
+	for(i=1; i<=pageCount; i++){
+		$(".page"+i).hide();
+	}
+
 	//hover effect
 	$(".example").hover(
 		function() {
@@ -153,12 +109,6 @@ $(document).ready(function(){
 			$(exampleId + " .info").fadeOut("fast");
 		}
 	)
-
-	//hide other pages(subcontainers)
-	for(i=1; i<=pageCount; i++){
-		$(".page"+i).hide();
-	}
-
 
 })
 </script>

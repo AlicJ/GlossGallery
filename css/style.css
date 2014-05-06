@@ -1,5 +1,6 @@
 body {
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 a {
@@ -49,5 +50,6 @@ a {
 }
 
 .subcontainer {
-	float: left;
+	width: 960px;
+	height: 600px;
 }
