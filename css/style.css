@@ -64,6 +64,10 @@ a {
 	margin: 0;
 }
 
+.name {
+	font-size: larger;
+}
+
 .video {
 	width: 50px;
 	height: 35px;
@@ -79,9 +83,12 @@ a {
 }
 
 .scroll {
-	height: 600px;
+	height: 332px;
 	width: 75px;
-	background: rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.3);
+	font-size: 64px;
+	text-align: center;
+	padding-top: 268px;
 }
 
 .scroll.left{

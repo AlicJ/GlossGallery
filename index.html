@@ -135,13 +135,13 @@ $(document).ready(function(){
 		}
 	)
 
-	$(".scroll").fadeTo("fast", 0.3);
+	$(".scroll").fadeTo("fast", 0.6);
 
 	$(".scroll").hover(
 		function(){
-			$(this).fadeTo("normal", 1);
+			$(this).fadeTo("fast", 1);
 		},function(){
-			$(this).fadeTo("normal", 0.3);
+			$(this).fadeTo("fast", 0.6);
 		}
 	)
 
@@ -151,9 +151,9 @@ $(document).ready(function(){
 	
 
 	<div class="container">
-		<div class="scroll left"></div>
+		<div class="scroll left">&lt;</div>
 
-		<div class="scroll right"></div>
+		<div class="scroll right">&gt;</div>
 
 	</div>
 
