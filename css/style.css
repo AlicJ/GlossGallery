@@ -24,6 +24,9 @@ a {
 .picture {
 	width: 220px;
 	height: 220px;
+	display: block;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .picture img {
