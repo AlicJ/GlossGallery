@@ -1,3 +1,5 @@
+//If more examples/projects are to be added, please add them at the end of 
+// exampleData
 var exampleData = [
 	[
 		"images/HauntedHouse.png",
@@ -38,9 +40,15 @@ var exampleData = [
 		"http://youtu.be/9OeeomwC6LY",
 		"Windows",
 		"Chang Liu,Xiaomin Bai, Yu Wang"
-	],
+	]
 
 ]
+//new example format:
+//	[
+//		url to youtube video or a image,
+//		name of the project,
+//		the author(s)
+//	]
 
 function glossExample(videoPath, name, author){
 	this.__videoPath = videoPath;
