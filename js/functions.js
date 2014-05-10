@@ -4,22 +4,22 @@ var exampleData = [
 	[
 		"images/HauntedHouse.png",
 		"HauntedHouse",
-		"Mackenzie Campbell, Manaar Hyder and Maya Ramamurthy"
+		"Mackenzie Campbell<br/>Manaar Hyder<br/>Maya Ramamurthy"
 	],
 	[
 		"http://youtu.be/N49IZIFam4A",
 		"MovingStar",
-		"Ahmed Khan, MATTHEW PRIOR-COXHEAD"
+		"Ahmed Khan<br/>MATTHEW PRIOR-COXHEAD"
 	],
 	[
 		"http://youtu.be/I0koyAlEcRk",
 		"Parabolic",
-		"Zichen Jiang, Yi Wang"
+		"Zichen Jiang<br/>Yi Wang"
 	],
 	[
 		"http://youtu.be/yhava85k0mU",
 		"SolarSystem",
-		"Trevor Rae, Paul Warnick, James Zhu, Katrine Rachitsky"
+		"Trevor Rae<br/>Paul Warnick<br/>James Zhu<br/>Katrine Rachitsky"
 	],
 	[
 		"http://youtu.be/Q-VMyfBazeA",
@@ -34,12 +34,12 @@ var exampleData = [
 	[
 		"http://youtu.be/QeDUpSdWP1w",
 		"Windmills",
-		"Yash Patel, Chinthujan Nandakumar"
+		"Yash Patel<br/>Chinthujan Nandakumar"
 	],
 	[
 		"http://youtu.be/9OeeomwC6LY",
 		"Windows",
-		"Chang Liu,Xiaomin Bai, Yu Wang"
+		"Chang Liu<br/>Xiaomin Bai<br/>Yu Wang"
 	]
 
 ]
@@ -97,20 +97,19 @@ $(document).ready(function(){
 		 <a href=\"https://github.com/VCL1995\">Chang Liu</a></span>");
 
 	<!-- prettyPhoto- pop up video -->
-	    $(document).ready(function(){
-	        $("a[rel^='prettyPhoto']").prettyPhoto({
+	$("a[rel^='prettyPhoto']").prettyPhoto({
 	            default_width: 720,
 	            default_height: 544,
 	            theme: 'pp_default',
 	            social_tools: " "
-	        });
-	    });
+	});
 	<!--  -->
 
 	//hide other pages(subcontainers)
 	for(i=1; i<=pageCount; i++){
 		$(".page"+i).hide();
 	}
+
 	//next page
 	$(".right").click(function(){
 		$(".page"+presentPageNum).hide()
@@ -155,5 +154,6 @@ $(document).ready(function(){
 			$(this).fadeTo("fast", 1);
 		}
 	)
+
 
 })

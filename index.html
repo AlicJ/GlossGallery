@@ -19,6 +19,39 @@
 		
 	</div>
 
+	<script type="text/javascript">
+		function resize() {
+			var containerWidth = parseFloat($(".container").css("width"));
+			var containerHeight = containerWidth /16*10;
+			var exampleWidth = parseFloat($(".example").css("width"));
+			var infoPadding = parseFloat($(".info").css("padding-top"));
+			var infoWidth = parseFloat(exampleWidth) * (1-infoPadding/100);
+			var arrowSize = containerHeight * 0.12
+			var fontSize = arrowSize * 0.25
+			var scrollHeight = (containerHeight + arrowSize)/2;
+			var scrollPadding = containerHeight - scrollHeight;
+			$("html").css({"font-size": fontSize})
+			$(".container").css({height: containerHeight})
+			$(".example").css({height: exampleWidth});
+			$(".info").css({bottom: exampleWidth});
+			$(".scroll").css({height: scrollHeight});
+			$(".scroll").css({"padding-top": scrollPadding});
+			$(".scroll").css({"font-size": arrowSize})
+		}
+		$(document).ready(function(){
+			// setting up width and height dynamically
+			resize();
+			
+			$( window ).bind("resize", function(){
+			    resize()
+
+				// set font size in percentage of the height/width
+				// background image
+		    })
+		})
+		
+
+	</script>
 	
 
 	
