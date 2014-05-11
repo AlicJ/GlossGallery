@@ -43,19 +43,26 @@ var exampleData = [
 	]
 
 ]
-//new example format:
+// New example format:
 //	[
 //		url to youtube video or a image,
 //		name of the project,
 //		the author(s)
 //	]
+// Moreover, the sample picture of each example is named
+// EXACTLY the same as the name of the example, with png format
+// and is put under 'images' folder.
+// The pictures are all squares, i.e., the width and height are
+// the same, and should be bigger than 200px * 200px for better
+// performance on various devices.
 
+// create the glossExample object
 function glossExample(videoPath, name, author){
 	this.__videoPath = videoPath;
 	this.__name = name;
 	this.__author = author;
 }
-
+// append one example into the specified markup
 function appendExample(example, whereToAppend){
 	$(whereToAppend).append("\
 		<div class=\"example\" id=\"" + example.__name + "\">\
@@ -70,13 +77,30 @@ function appendExample(example, whereToAppend){
 		</div>"
 	)
 }
+// resize various markup and font size whenever the windoes is resized
+function resize() {
+	var containerWidth = parseFloat($(".container").css("width"));
+	var containerHeight = containerWidth /16*10;
+	var exampleWidth = parseFloat($(".example").css("width"));
+	var infoPadding = parseFloat($(".info").css("padding-top"));
+	var infoWidth = parseFloat(exampleWidth) * (1-infoPadding/100);
+	var arrowSize = containerHeight * 0.12
+	var fontSize = arrowSize * 0.25
+	var scrollHeight = (containerHeight + arrowSize)/2;
+	var scrollPadding = containerHeight - scrollHeight;
+	$("html").css({"font-size": fontSize})
+	$(".container").css({height: containerHeight})
+	$(".example").css({height: exampleWidth});
+	$(".info").css({bottom: exampleWidth});
+	$(".scroll").css({height: scrollHeight, "padding-top": scrollPadding, "font-size": arrowSize});
+}
 
 $(document).ready(function(){
 	//append all examples to html
 	var countExample = 0;
 	var pageCount = 0;
 	var presentPageNum = 0
-
+	// output all the examples into html page
 	for(var i=0; i<exampleData.length; i++){
 		//if maximum of 6 examples is reached, cerate aother container
 		if(countExample % 6 == 0){
@@ -89,42 +113,40 @@ $(document).ready(function(){
 		appendExample(example, ".page" + String(pageCount));
 		console.log(example)
 		countExample ++;
-
 	}
-
+	// add credit
 	$(".container").append("<span class=\"contributor\">Buit by \
 		<a href=\"https://github.com/AlicJ\">Zichen Jiang</a>,\
 		 <a href=\"https://github.com/VCL1995\">Chang Liu</a></span>");
-
-	<!-- prettyPhoto- pop up video -->
+	// assign dimentison to various markups
+	resize();
+	//hide other pages(subcontainers)
+	for(i=1; i<=pageCount; i++){
+		$(".page"+i).hide();
+	}
+	// prettyPhoto- pop up video
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 	            default_width: 720,
 	            default_height: 544,
 	            theme: 'pp_default',
 	            social_tools: " "
 	});
-	<!--  -->
 
-	//hide other pages(subcontainers)
-	for(i=1; i<=pageCount; i++){
-		$(".page"+i).hide();
-	}
 
-	//next page
+	// STARTING HEAR ARE ALL JQUERY EVENT HANDLERS
+	//next page button
 	$(".right").click(function(){
 		$(".page"+presentPageNum).hide()
-
 		if(presentPageNum<pageCount){
 			presentPageNum ++;
 		}else{
 			presentPageNum = 0;
 		}
-
-		$(".page"+presentPageNum).fadeIn()
+		$(".page"+presentPageNum).fadeIn();
 	})
-	//previous page
+	//previous page button
 	$(".left").click(function(){
-		$(".page"+presentPageNum).hide()
+		$(".page"+presentPageNum).hide();
 
 		if(presentPageNum!=0){
 			presentPageNum --;
@@ -132,10 +154,9 @@ $(document).ready(function(){
 			presentPageNum = pageCount;
 		}
 
-		$(".page"+presentPageNum).fadeIn()
+		$(".page"+presentPageNum).fadeIn();
 	})
-
-	//hover effect
+	// individual exmaple icon hover effect
 	$(".example").hover(
 		function() {
 			exampleId = "#" + $(this).attr('id');
@@ -144,9 +165,7 @@ $(document).ready(function(){
 			$(exampleId + " .info").fadeOut("fast");
 		}
 	)
-
-	$(".scroll").fadeTo("fast", 1);
-
+	// page button hover effect
 	$(".scroll").hover(
 		function(){
 			$(this).fadeTo("fast", 0.6);
@@ -154,6 +173,9 @@ $(document).ready(function(){
 			$(this).fadeTo("fast", 1);
 		}
 	)
-
-
+	// resize most markups, including padding and font size for some
+	// whenever the width of the window is changed
+	$(window).bind("resize", function(){
+		resize()
+	})
 })
