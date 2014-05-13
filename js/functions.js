@@ -156,15 +156,25 @@ $(document).ready(function(){
 
 		$(".page"+presentPageNum).fadeIn();
 	})
-	// individual exmaple icon hover effect
-	$(".example").hover(
-		function() {
-			exampleId = "#" + $(this).attr('id');
+	// individual example icon on click effect
+	$(".example").click(function(){
+		var exampleId = "#" + $(this).attr('id');
+		var infoDisplayStatus = $(exampleId + " .info").css("display");
+		if(infoDisplayStatus == "none"){
 			$(exampleId + " .info").fadeIn("fast");
-		}, function() {
+		}else{
 			$(exampleId + " .info").fadeOut("fast");
 		}
-	)
+	})
+	// individual exmaple icon hover effect
+	//$(".example").hover(
+	//	function() {
+	//		var exampleId = "#" + $(this).attr('id');
+	//		$(exampleId + " .info").fadeIn("fast");
+	//	}, function() {
+	//		$(exampleId + " .info").fadeOut("fast");
+	//	}
+	//)
 	// page button hover effect
 	$(".scroll").hover(
 		function(){
