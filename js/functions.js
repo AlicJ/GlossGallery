@@ -80,7 +80,7 @@ function appendExample(example, whereToAppend){
 // resize various markup and font size whenever the windoes is resized
 function resize() {
 	var containerWidth = parseFloat($(".container").css("width"));
-	var containerHeight = containerWidth /16*10;
+	var containerHeight = containerWidth /16*9;
 	var exampleWidth = parseFloat($(".example").css("width"));
 	var infoPadding = parseFloat($(".info").css("padding-top"));
 	var infoWidth = parseFloat(exampleWidth) * (1-infoPadding/100);
