@@ -102,7 +102,7 @@ $(document).ready(function(){
 	var presentPageNum = 0
 	// output all the examples into html page
 	for(var i=0; i<exampleData.length; i++){
-		//if maximum of 6 examples is reached, cerate aother subcontainer
+		//if maximum of 6 examples is reached, cerate aother container
 		if(countExample % 6 == 0){
 			$(".container").append("<div class=\"subcontainer page" + (countExample/6) + "\"></div>");
 			pageCount = countExample/6;
@@ -167,14 +167,14 @@ $(document).ready(function(){
 		}
 	})
 	// individual exmaple icon hover effect
-	$(".example").hover(
-		function() {
-			var exampleId = "#" + $(this).attr('id');
-			$(exampleId + " .info").fadeIn("fast");
-		}, function() {
-			$(exampleId + " .info").fadeOut("fast");
-		}
-	)
+	//$(".example").hover(
+	//	function() {
+	//		var exampleId = "#" + $(this).attr('id');
+	//		$(exampleId + " .info").fadeIn("fast");
+	//	}, function() {
+	//		$(exampleId + " .info").fadeOut("fast");
+	//	}
+	//)
 	// page button hover effect
 	$(".scroll").hover(
 		function(){
