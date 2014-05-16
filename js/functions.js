@@ -102,7 +102,7 @@ $(document).ready(function(){
 	var presentPageNum = 0
 	// output all the examples into html page
 	for(var i=0; i<exampleData.length; i++){
-		//if maximum of 6 examples is reached, cerate aother container
+		//if maximum of 6 examples is reached, cerate aother subcontainer
 		if(countExample % 6 == 0){
 			$(".container").append("<div class=\"subcontainer page" + (countExample/6) + "\"></div>");
 			pageCount = countExample/6;
