@@ -167,14 +167,14 @@ $(document).ready(function(){
 		}
 	})
 	// individual exmaple icon hover effect
-	//$(".example").hover(
-	//	function() {
-	//		var exampleId = "#" + $(this).attr('id');
-	//		$(exampleId + " .info").fadeIn("fast");
-	//	}, function() {
-	//		$(exampleId + " .info").fadeOut("fast");
-	//	}
-	//)
+	$(".example").hover(
+		function() {
+			var exampleId = "#" + $(this).attr('id');
+			$(exampleId + " .info").fadeIn("fast");
+		}, function() {
+			$(exampleId + " .info").fadeOut("fast");
+		}
+	)
 	// page button hover effect
 	$(".scroll").hover(
 		function(){
