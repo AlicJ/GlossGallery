@@ -6,4 +6,6 @@ http://hackage.haskell.org/package/mcmaster-gloss-examples-2013
 
 
 Contributors: Zichen Jiang, Chang Liu
+
 have fun '(^·ω·^ )'
+
