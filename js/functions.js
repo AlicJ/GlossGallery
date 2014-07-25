@@ -111,7 +111,7 @@ $(document).ready(function(){
 		var example = new glossExample(exampleData[i][0],exampleData[i][1],exampleData[i][2]);
 		//var example = new glossExample(" ","Example"+(i+1),"Author"+(i+1));
 		appendExample(example, ".page" + String(pageCount));
-		console.log(example)
+		// console.log(example)
 		countExample ++;
 	}
 	// add credit
