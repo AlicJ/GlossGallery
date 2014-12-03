@@ -18,6 +18,7 @@ The sets of lines located at the center shares the same principle with the sets 
 the sides, but with opposite x and y value.
 
 -}
+
 winX=600
 winY=600
 winHalfX=300--div winX 2
