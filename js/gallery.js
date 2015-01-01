@@ -1,81 +1,45 @@
-//If more examples/projects are to be added, please add them at the end of 
-// exampleData
-var exampleData = [
-	[
-		"images/HauntedHouse.png",
-		"HauntedHouse",
-		"Mackenzie Campbell<br/>Manaar Hyder<br/>Maya Ramamurthy"
-	],
-	[
-		"http://youtu.be/N49IZIFam4A",
-		"MovingStar",
-		"Ahmed Khan<br/>MATTHEW PRIOR-COXHEAD"
-	],
-	[
-		"http://youtu.be/I0koyAlEcRk",
-		"Parabolic",
-		"Zichen Jiang<br/>Yi Wang"
-	],
-	[
-		"http://youtu.be/yhava85k0mU",
-		"SolarSystem",
-		"Trevor Rae<br/>Paul Warnick<br/>James Zhu<br/>Katrine Rachitsky"
-	],
-	[
-		"http://youtu.be/Q-VMyfBazeA",
-		"Stare",
-		"Mingfei Jiang"
-	],
-	[
-		"http://youtu.be/3Vwze16yHSM",
-		"Waves",
-		"Sergio Cosman Agraz"
-	],
-	[
-		"http://youtu.be/QeDUpSdWP1w",
-		"Windmills",
-		"Yash Patel<br/>Chinthujan Nandakumar"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu<br/>Xiaomin Bai<br/>Yu Wang"
-	]
-
-]
-// New example format:
-//	[
-//		url to youtube video or a image,
-//		name of the project,
-//		the author(s)
-//	]
-// Moreover, the sample picture of each example is named
-// EXACTLY the same as the name of the example, with png format
-// and is put under 'images' folder.
-// The pictures are all squares, i.e., the width and height are
-// the same, and should be bigger than 200px * 200px for better
-// performance on various devices.
-
 // create the glossExample object
 function glossExample(videoPath, name, author){
-	this.__videoPath = videoPath;
-	this.__name = name;
-	this.__author = author;
+	this._videoPath = videoPath;
+	this._name = name;
+	this._author = author;
 }
 // append one example into the specified markup
 function appendExample(example, whereToAppend){
-	$(whereToAppend).append("\
-		<div class=\"example\" id=\"" + example.__name + "\">\
-			<div class=\"picture\">\
-				<img src=\"images/" + example.__name + ".png\" />\
-			</div>\
-			<div class=\"info\">\
-				<p class=\"name\">" + example.__name + "</p>\
-				<p class=\"author\">" + example.__author + "</p>\
-				<span class=\"video\"><a rel=\"prettyPhoto\" href=\"" + example.__videoPath + "\">&nbsp</a></span>\
-			</div>\
-		</div>"
-	)
+	var icon = $('<div></div>')
+					.addClass('example')
+					.attr('id', example._name)
+					.append($('<div></div>')
+						.addClass('picture')
+						.append($('<img />')
+							.attr({
+								src: 'images/'+example._name+'.png',
+								alt: example._name
+							})
+						)
+					)
+					.append($('<div></div>')
+						.addClass('info')
+						.append($('<p></p>')
+							.addClass('name')
+							.append(example._name)
+						)
+						.append($('<p></p>')
+							.addClass('author')
+							.append(example._author)
+						)
+						.append($('<span></span>')
+							.addClass('video')
+							.append($('<a></a>')
+								.attr({
+									rel: 'prettyPhoto',
+									href: example._videoPath
+								})
+								.html('&nbsp')
+							)
+						)
+					)
+	$(whereToAppend).append(icon);
 }
 // resize various markup and font size whenever the windoes is resized
 function resize() {
