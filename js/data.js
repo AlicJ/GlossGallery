@@ -1,15 +1,23 @@
-//If more examples/projects are to be added, please add them at the end of 
-// exampleData
+// If more examples/projects are to be added, 
+// please add them at the END of exampleData
+// If a new year's projects are added,
+// add the new year to the TOP of yearData
+
+var yearData =[
+	2014,
+	2013
+]
+
 var exampleData = [
 	{
-		videoPath:  "images/HauntedHouse.png",
-		name: 		"HauntedHouse",
+		videoPath:  "images/Haunted_House.png",
+		name: 		"Haunted_House",
 		author: 	["Mackenzie Campbell", "Manaar Hyder", "Maya Ramamurthy"],
 		year: 		2013
 	},
 	{
 		videoPath:  "http://youtu.be/N49IZIFam4A",
-		name: 		"MovingStar",
+		name: 		"Moving_Star",
 		author: 	["Ahmed Khan", "Matthew Prior-Coxhead"],
 		year: 		2013
 	},
@@ -21,7 +29,7 @@ var exampleData = [
 	},
 	{
 		videoPath:  "http://youtu.be/yhava85k0mU",
-		name: 		"SolarSystem",
+		name: 		"Solar_System",
 		author: 	["Trevor Rae", "Katrine Rachitsky", "Paul Warnick", "James Zhu"],
 		year: 		2013
 	},
@@ -53,10 +61,10 @@ var exampleData = [
 ]
 // New example format:
 //	{
-//		vid eoPath:  url to youtube video or a image,
+//		vid eoPath: url to youtube video or a image,
 //		name: 		name of the project,
 //		author: 	the author(s),
-year: 		2013
+// 		year: 		2013
 //	}
 // Moreover, the sample picture of each example is named
 // EXACTLY the same as the name of the example, with png format

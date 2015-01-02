@@ -16,7 +16,7 @@ function appendExample(example, whereToAppend){
 						.addClass('info')
 						.append($('<p></p>')
 							.addClass('name')
-							.append(example.name)
+							.append(example.name.replace('_', ' '))
 						)
 						.append($('<p></p>')
 							.addClass('author')

@@ -15,3 +15,39 @@ html, body {
 ol, ul {
 	list-style: none;
 }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #ebebeb;
+}
+/* Custom footer
+-----------------------------------------------------------*/
+.footer {
+	padding: 16px 0;
+}
+
+.social_icons {
+	float: left;
+}
+
+.social_icons img {
+    opacity: 0.3;
+}
+
+.footer-text {
+	float: right;
+}

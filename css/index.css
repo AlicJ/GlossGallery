@@ -1,5 +1,5 @@
 header {
-	padding-bottom: 15px;
+	padding-bottom: 12px;
 	border-bottom: 1px solid #444;
 }
 
@@ -13,9 +13,74 @@ header {
 
 #main {
 	border-left: 1px solid #666;
-	padding: 12px 18px;
+	padding: 1.8em 0 1.5em 3em ;
+	margin-bottom: 3em;
 }
 
-.year {
+#sidebar .year {
 	margin: 12px 0 0 ;
+	cursor: pointer;
+}
+
+#sidebar ul li {
+	cursor: pointer;
+}
+
+#sidebar .year:hover, #sidebar ul li:hover {
+	color: rgb(76,158,217)
+}
+
+.icon {
+	float: left;
+	margin: 0 4em 2em 0;
+	cursor: pointer;
+}
+
+.icon:hover {
+	opacity: 0.75;
+}
+
+.icon.picture {
+	border-radius: 10px;
+	width: 200px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+.icon.picture img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.icon.name {
+	padding: 0.5em;
+	margin: 0;
+	font-size: larger;
+	font-weight: 700;
+	text-align: center;
+}
+
+.project .name h2 {
+	font-weight: 700;
+	margin: 0;
+	text-align: center;
+}
+
+.project .author {
+	margin: 0 0 20px;
+	text-align: center;
+}
+
+.project .demo {
+	margin: 0 auto;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+	margin-bottom: 20px;
+}
+
+.project .demo, .project .demo img {
+	width: 600px;
+	height: 600px;
+}
+
+.project p {
+	margin-top: 10px;
 }
