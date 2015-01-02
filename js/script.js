@@ -8,37 +8,38 @@ var EXAMPLES = [];
 // ]
 
 $(document).ready(function() {
-	// prettyPhoto- pop up video
-
-
 	genProjs();
 	sidebarGen();
+	mainGen()
 	setHeight();
 });
 
 // EVENT HANDLERS
 $(document).on('click', '.proj-li', function(event) {
 	event.preventDefault();
+	event.stopPropagation();
+	console.log(event.target)
 	$('#main').hide();
 	$('#main').load('project.html',
 		function(){
 			setHeight();
-			$(event.target).parent('ul')
 			var curYear = parseInt($(event.target).attr('year'));
 			var curExp = $(event.target).attr('id');
+			console.log(curYear + '  ' + curExp);
 			// match the year first
 			var result = $.grep(EXAMPLES, function(e) {
 				return e.year == curYear;
 			});
 			// get the first and only result
 			result = result[0];
-			console.log(result)
+			console.log(result);
 			// them match the example project
 			var proj = $.grep(result.exps, function(e) {
 				return e.name == curExp;
 			});
 			// get the first and only result
 			proj = proj[0];
+			console.log(proj);
 			// appending project data
 			$('#main').find('.name h2').html(proj.name.replace('_',' '));
 			$('#main').find('.author p').html(function(){
@@ -60,6 +61,7 @@ $(document).on('click', '.proj-li', function(event) {
 												alt: proj.name
 											});
 			$('#main').find('.file a').attr('href', proj.filePath);
+			// prettyPhoto- pop up video
 			$("a[rel^='prettyPhoto']").prettyPhoto({
 				default_width: 720,
 				default_height: 544,
@@ -67,14 +69,19 @@ $(document).on('click', '.proj-li', function(event) {
 				social_tools: " "
 			});
 			$('#main').fadeIn();
-			console.log(proj)
 	});
 	
 });
+var temp;
+$(document).on('click', '.icon .picture, icon .picture img, .icon .name', function(event) {
+	event.stopPropagation();
+	$(event.target).parents('.proj-li').click();
+});
+
 
 
 // make #sidebar and #main the same height
-function setHeight(){
+function setHeight() {
 	$('#sidebar, #main').css('height', '');
 	var sideHei = $('#sidebar').innerHeight();
 	var mainHei = $('#main').innerHeight();
@@ -106,9 +113,9 @@ function genProjs() {
 	});
 }
 
-
-function sidebarGen(){
-	// go through the EXAMPLE list
+// Generate the sidebar navigation
+function sidebarGen() {
+	// go through the EXAMPLES list
 	$.each(EXAMPLES, function(index, yearOfExp) {
 		var list = $('<div></div>')
 						.append($('<p></p>')
@@ -139,3 +146,55 @@ function sidebarGen(){
 		$('#sidebar').append(list);
 	});
 }
+
+// generate the main gallery icons
+function mainGen() {
+	// go through the EXAMPLES list
+	$.each(EXAMPLES, function(index, yearOfExp) {
+		var yearBlock = $('<div></div>')
+						.append($('<h2></h2>')
+							.append(yearOfExp.year)
+						)
+						.append(
+							function() {
+								// generate each icon
+								var html = $('<div></div>');
+								$.each(yearOfExp.exps, function(index, exp) {
+									var icon = $('<div></div>')
+													.attr({
+														id: exp.name,
+														year: exp.year
+													})
+													.addClass('icon proj-li')
+													.append($('<div></div>')
+														.addClass('picture')
+														.append($('<img src="" alt="" />')
+															.attr({
+																src: exp.imgPath,
+																alt: exp.name
+															})
+														)
+													)
+													.append($('<div></div>')
+														.addClass('name')
+														.append(exp.name.replace('_', ' '))
+													)
+									$(html).append(icon);
+								});
+								return html;
+							}
+						)
+		$('#main').append(yearBlock)
+	});
+}
+
+/*
+<div id="HauntedHouse" class="icon">
+	<div class="picture">
+		<img alt="HauntedHouse" src="images/HauntedHouse.png" />
+	</div>
+	<div class="name">
+		HauntedHouse
+	</div>
+</div>
+*/

@@ -72,6 +72,87 @@ var exampleData = [
 		year: 		2013,
 		filePath: 	"2013/Windows.hs",
 		imgPath: 	"images/2013/Windows.png" 
+	},
+	{
+		videoPath:  "",
+		name: 		"Boulangers_Fractal",
+		author: 	["Jonathan Boulanger"],
+		year: 		2014,
+		filePath: 	"2014/BoulangersFractal.hs",
+		imgPath: 	"images/2014/BoulangersFractal.png"
+
+	},
+	{
+		videoPath:  "",
+		name: 		"Clock",
+		author: 	["Anqi Gu", "Chaoyi Kuang", "Xiaoxu Sun"],
+		year: 		2014,
+		filePath: 	"2014/Clock.hs",
+		imgPath: 	"images/2014/Clock.png"
+
+	},
+	{
+		videoPath:  "",
+		name: 		"DrAnand",
+		author: 	["Shiyu Luo","Serena Qi"],
+		year: 		2014,
+		filePath: 	"2014/DrAnand.hs",
+		imgPath: 	"images/2014/DrAnand.png"
+
+	},
+	{
+		videoPath:  "",
+		name: 		"Final_Frontier",
+		author: 	["Tanya Bouman", "Natasha DeCoste"],
+		year: 		2014,
+		filePath: 	"2014/FinalFrontier.hs",
+		imgPath: 	"images/2014/FinalFrontier.png"
+
+	},
+	{
+		videoPath:  "images/2014/LinkGlossChallenge.png",
+		name: 		"Link_Gloss_Challenge",
+		author: 	["Juan Santana Penner"],
+		year: 		2014,
+		filePath: 	"2014/LinkGlossChallenge.hs",
+		imgPath: 	"images/2014/LinkGlossChallenge.png"
+
+	},
+	{
+		videoPath:  "",
+		name: 		"Naruto",
+		author: 	["Yunfeng Li", "Yulun Wu"],
+		year: 		2014,
+		filePath: 	"2014/Naruto.hs",
+		imgPath: 	"images/2014/Naruto.png"
+
+	},
+	{
+		videoPath:  "",
+		name: 		"Rotating_Clock",
+		author: 	["Jonathan Boulanger"],
+		year: 		2014,
+		filePath: 	"2014/RotatingClock.hs",
+		imgPath: 	"images/2014/RotatingClock.png"
+
+	},
+	{
+		videoPath:  "",
+		name: 		"Stick_Animation",
+		author: 	["Prakhar Jalan"],
+		year: 		2014,
+		filePath: 	"2014/StickAnimation.hs",
+		imgPath: 	"images/2014/StickAnimation.png"
+
+	},
+	{
+		videoPath:  "",
+		name: 		"Yin_Yang",
+		author: 	["Nicolas Tristani"],
+		year: 		2014,
+		filePath: 	"2014/YinYang.hs",
+		imgPath: 	"images/2014/YinYang.png"
+
 	}
 
 ]
