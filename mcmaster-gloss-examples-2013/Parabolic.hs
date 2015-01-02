@@ -24,7 +24,6 @@ winY=600
 winHalfX=300--div winX 2
 winHalfY=300--div winY 2
 
-
 main = animateIt
 
 animateIt = animate
@@ -43,13 +42,13 @@ drawSide = display
     $ Pictures $ calcParaSide 50
         
 frame :: Float -> Picture
-frame time = Pictures $(
+frame time = Pictures $ 
             {-[color white (Rotate (time/3600 * pi) $ Pictures $ calcParaCent 24)] ++  --hour arm
             [color white (Rotate (time/60 * pi) $ Pictures $ calcParaCent 30)] ++  --minute arm
             [color white (Rotate (time/1 * pi) $ Pictures $ calcParaCent 48)] ++  --second arm-}
             [color white (Rotate (time * 4 * pi) $ Pictures $ calcParaCent 50)] ++
             [color white (Rotate (time * 6 * pi) $ Pictures $ calcParaCent 30)] ++
-            [color white ( Pictures $ calcParaSide 50)])
+            [color white ( Pictures $ calcParaSide 50)]
             
             
 calcParaSide m = parabolicSide m m 
