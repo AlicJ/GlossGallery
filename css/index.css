@@ -1,0 +1,21 @@
+header {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #444;
+}
+
+#content {
+	border-top: 1px solid #666;
+}
+
+#sidebar {
+	border-right: 1px solid #444;
+}
+
+#main {
+	border-left: 1px solid #666;
+	padding: 12px 18px;
+}
+
+.year {
+	margin: 12px 0 0 ;
+}

@@ -1,54 +1,63 @@
 //If more examples/projects are to be added, please add them at the end of 
 // exampleData
 var exampleData = [
-	[
-		"images/HauntedHouse.png",
-		"HauntedHouse",
-		"Mackenzie Campbell<br/>Manaar Hyder<br/>Maya Ramamurthy"
-	],
-	[
-		"http://youtu.be/N49IZIFam4A",
-		"MovingStar",
-		"Ahmed Khan<br/>MATTHEW PRIOR-COXHEAD"
-	],
-	[
-		"http://youtu.be/I0koyAlEcRk",
-		"Parabolic",
-		"Zichen Jiang<br/>Yi Wang"
-	],
-	[
-		"http://youtu.be/yhava85k0mU",
-		"SolarSystem",
-		"Trevor Rae<br/>Paul Warnick<br/>James Zhu<br/>Katrine Rachitsky"
-	],
-	[
-		"http://youtu.be/Q-VMyfBazeA",
-		"Stare",
-		"Mingfei Jiang"
-	],
-	[
-		"http://youtu.be/3Vwze16yHSM",
-		"Waves",
-		"Sergio Cosman Agraz"
-	],
-	[
-		"http://youtu.be/QeDUpSdWP1w",
-		"Windmills",
-		"Yash Patel<br/>Chinthujan Nandakumar"
-	],
-	[
-		"http://youtu.be/9OeeomwC6LY",
-		"Windows",
-		"Chang Liu<br/>Xiaomin Bai<br/>Yu Wang"
-	]
+	{
+		videoPath:  "images/HauntedHouse.png",
+		name: 		"HauntedHouse",
+		author: 	["Mackenzie Campbell", "Manaar Hyder", "Maya Ramamurthy"],
+		year: 		2013
+	},
+	{
+		videoPath:  "http://youtu.be/N49IZIFam4A",
+		name: 		"MovingStar",
+		author: 	["Ahmed Khan", "Matthew Prior-Coxhead"],
+		year: 		2013
+	},
+	{
+		videoPath:  "http://youtu.be/I0koyAlEcRk",
+		name: 		"Parabolic",
+		author: 	["Alic Jiang", "Jimmy Wang"],
+		year: 		2013
+	},
+	{
+		videoPath:  "http://youtu.be/yhava85k0mU",
+		name: 		"SolarSystem",
+		author: 	["Trevor Rae", "Katrine Rachitsky", "Paul Warnick", "James Zhu"],
+		year: 		2013
+	},
+	{
+		videoPath:  "http://youtu.be/Q-VMyfBazeA",
+		name: 		"Stare",
+		author: 	["Mingfei Jiang"],
+		year: 		2013
+	},
+	{
+		videoPath:  "http://youtu.be/3Vwze16yHSM",
+		name: 		"Waves",
+		author: 	["Sergio Cosman Agraz"],
+		year: 		2013
+	},
+	{
+		videoPath:  "http://youtu.be/QeDUpSdWP1w",
+		name: 		"Windmills",
+		author: 	["Chinthujan Nandakumar", "Yash Patel"],
+		year: 		2013
+	},
+	{
+		videoPath:  "http://youtu.be/9OeeomwC6LY",
+		name: 		"Windows",
+		author: 	["Xiaomin Bai", "Chang Liu", "Yu Wang"],
+		year: 		2013
+	}
 
 ]
 // New example format:
-//	[
-//		url to youtube video or a image,
-//		name of the project,
-//		the author(s)
-//	]
+//	{
+//		vid eoPath:  url to youtube video or a image,
+//		name: 		name of the project,
+//		author: 	the author(s),
+year: 		2013
+//	}
 // Moreover, the sample picture of each example is named
 // EXACTLY the same as the name of the example, with png format
 // and is put under 'images' folder.

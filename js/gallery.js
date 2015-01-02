@@ -1,20 +1,14 @@
-// create the glossExample object
-function glossExample(videoPath, name, author){
-	this._videoPath = videoPath;
-	this._name = name;
-	this._author = author;
-}
 // append one example into the specified markup
 function appendExample(example, whereToAppend){
 	var icon = $('<div></div>')
 					.addClass('example')
-					.attr('id', example._name)
+					.attr('id', example.name)
 					.append($('<div></div>')
 						.addClass('picture')
 						.append($('<img />')
 							.attr({
-								src: 'images/'+example._name+'.png',
-								alt: example._name
+								src: 'images/'+example.name+'.png',
+								alt: example.name
 							})
 						)
 					)
@@ -22,18 +16,26 @@ function appendExample(example, whereToAppend){
 						.addClass('info')
 						.append($('<p></p>')
 							.addClass('name')
-							.append(example._name)
+							.append(example.name)
 						)
 						.append($('<p></p>')
 							.addClass('author')
-							.append(example._author)
+							.append(function(){
+								var string = "";
+								$.each(example.author, function(index, auth) {
+									string += '> ' + auth;
+									if (index != example.author.length-1)
+										string += "<br/>";
+								});
+								return string;
+							})
 						)
 						.append($('<span></span>')
 							.addClass('video')
 							.append($('<a></a>')
 								.attr({
 									rel: 'prettyPhoto',
-									href: example._videoPath
+									href: example.videoPath
 								})
 								.html('&nbsp')
 							)
@@ -70,9 +72,8 @@ $(document).ready(function(){
 			$(".container").append("<div class=\"subcontainer page" + (countExample/6) + "\"></div>");
 			pageCount = countExample/6;
 		}
-		//create the example object
-		var example = new glossExample(exampleData[i][0],exampleData[i][1],exampleData[i][2]);
-		//var example = new glossExample(" ","Example"+(i+1),"Author"+(i+1));
+		//copy the example object
+		var example = exampleData[i];
 		appendExample(example, ".page" + String(pageCount));
 		// console.log(example)
 		countExample ++;
