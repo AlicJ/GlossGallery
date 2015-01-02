@@ -7,7 +7,7 @@ function appendExample(example, whereToAppend){
 						.addClass('picture')
 						.append($('<img />')
 							.attr({
-								src: 'images/'+example.name+'.png',
+								src: example.imgPath,
 								alt: example.name
 							})
 						)

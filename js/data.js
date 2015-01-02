@@ -10,52 +10,68 @@ var yearData =[
 
 var exampleData = [
 	{
-		videoPath:  "images/Haunted_House.png",
+		videoPath:  "images/2013/Haunted_House.png",
 		name: 		"Haunted_House",
 		author: 	["Mackenzie Campbell", "Manaar Hyder", "Maya Ramamurthy"],
-		year: 		2013
+		year: 		2013,
+		filePath: 	"2013/HauntedHouse.hs",
+		imgPath: 	"images/2013/Haunted_House.png" 
 	},
 	{
 		videoPath:  "http://youtu.be/N49IZIFam4A",
 		name: 		"Moving_Star",
 		author: 	["Ahmed Khan", "Matthew Prior-Coxhead"],
-		year: 		2013
+		year: 		2013,
+		filePath: 	"2013/MovingStar.hs",
+		imgPath: 	"images/2013/Moving_Star.png" 
 	},
 	{
 		videoPath:  "http://youtu.be/I0koyAlEcRk",
 		name: 		"Parabolic",
 		author: 	["Alic Jiang", "Jimmy Wang"],
-		year: 		2013
+		year: 		2013,
+		filePath: 	"2013/Parabolic.hs",
+		imgPath: 	"images/2013/Parabolic.png" 
 	},
 	{
 		videoPath:  "http://youtu.be/yhava85k0mU",
 		name: 		"Solar_System",
 		author: 	["Trevor Rae", "Katrine Rachitsky", "Paul Warnick", "James Zhu"],
-		year: 		2013
+		year: 		2013,
+		filePath: 	"2013/SolarSystem.hs",
+		imgPath: 	"images/2013/Solar_System.png" 
 	},
 	{
 		videoPath:  "http://youtu.be/Q-VMyfBazeA",
 		name: 		"Stare",
 		author: 	["Mingfei Jiang"],
-		year: 		2013
+		year: 		2013,
+		filePath: 	"2013/Stare.hs",
+		imgPath: 	"images/2013/Stare.png" 
 	},
 	{
 		videoPath:  "http://youtu.be/3Vwze16yHSM",
 		name: 		"Waves",
 		author: 	["Sergio Cosman Agraz"],
-		year: 		2013
+		year: 		2013,
+		filePath: 	"2013/Waves.hs",
+		imgPath: 	"images/2013/Waves.png" 
 	},
 	{
 		videoPath:  "http://youtu.be/QeDUpSdWP1w",
 		name: 		"Windmills",
 		author: 	["Chinthujan Nandakumar", "Yash Patel"],
-		year: 		2013
+		year: 		2013,
+		filePath: 	"2013/Windmills.hs",
+		imgPath: 	"images/2013/Windmills.png" 
 	},
 	{
 		videoPath:  "http://youtu.be/9OeeomwC6LY",
 		name: 		"Windows",
 		author: 	["Xiaomin Bai", "Chang Liu", "Yu Wang"],
-		year: 		2013
+		year: 		2013,
+		filePath: 	"2013/Windows.hs",
+		imgPath: 	"images/2013/Windows.png" 
 	}
 
 ]

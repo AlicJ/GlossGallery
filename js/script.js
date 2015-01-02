@@ -8,6 +8,9 @@ var EXAMPLES = [];
 // ]
 
 $(document).ready(function() {
+	// prettyPhoto- pop up video
+
+
 	genProjs();
 	sidebarGen();
 	setHeight();
@@ -16,7 +19,7 @@ $(document).ready(function() {
 // EVENT HANDLERS
 $(document).on('click', '.proj-li', function(event) {
 	event.preventDefault();
-
+	$('#main').hide();
 	$('#main').load('project.html',
 		function(){
 			setHeight();
@@ -34,6 +37,36 @@ $(document).on('click', '.proj-li', function(event) {
 			var proj = $.grep(result.exps, function(e) {
 				return e.name == curExp;
 			});
+			// get the first and only result
+			proj = proj[0];
+			// appending project data
+			$('#main').find('.name h2').html(proj.name.replace('_',' '));
+			$('#main').find('.author p').html(function(){
+				var string = 'By ';
+				$.each(proj.author, function(index, auth) {
+					string += auth;
+					if(index != proj.author.length - 1){
+						string += ', '
+					}
+				});
+				return string;
+			});
+			$('#main').find('.demo a').attr({
+												rel: 'prettyPhoto',
+												href: proj.videoPath
+											});
+			$('#main').find('.demo img').attr({
+												src: proj.imgPath,
+												alt: proj.name
+											});
+			$('#main').find('.file a').attr('href', proj.filePath);
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+				default_width: 720,
+				default_height: 544,
+				theme: 'pp_default',
+				social_tools: " "
+			});
+			$('#main').fadeIn();
 			console.log(proj)
 	});
 	
