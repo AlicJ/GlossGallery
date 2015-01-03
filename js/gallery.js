@@ -45,9 +45,9 @@ function appendExample(example, whereToAppend){
 }
 // resize various markup and font size whenever the windoes is resized
 function resize() {
-	var containerWidth = parseFloat($(".container").css("width"));
-	var containerHeight = containerWidth /16*9;
-	var exampleWidth = parseFloat($(".example").css("width"));
+	var containerWidth = parseFloat($(".container").width());
+	var containerHeight = containerWidth / 16 * 9;
+	var exampleWidth = parseFloat($(".example").width());
 	var infoPadding = parseFloat($(".info").css("padding-top"));
 	var infoWidth = parseFloat(exampleWidth) * (1-infoPadding/100);
 	var arrowSize = containerHeight * 0.12
@@ -55,9 +55,13 @@ function resize() {
 	var scrollHeight = (containerHeight + arrowSize)/2;
 	var scrollPadding = containerHeight - scrollHeight;
 	$("html").css({"font-size": fontSize})
-	$(".container").css({height: containerHeight})
-	$(".example").css({height: exampleWidth});
+	$(".container").height(containerHeight)
+	$(".example").height(exampleWidth);
 	$(".scroll").css({height: scrollHeight, "padding-top": scrollPadding, "font-size": arrowSize});
+
+	if($(".example").width() < $(".example").height()) {
+		$(".example").height($(".example").width());
+	}
 }
 
 $(document).ready(function(){
