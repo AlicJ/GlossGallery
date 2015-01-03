@@ -11,7 +11,7 @@ $(document).ready(function() {
 	genProjs();
 	sidebarGen();
 	mainGen()
-	setHeight();
+	// setHeight();
 });
 
 // EVENT HANDLERS
@@ -22,7 +22,7 @@ $(document).on('click', '.proj-li', function(event) {
 	$('#main').hide();
 	$('#main').load('project.html',
 		function(){
-			setHeight();
+			// setHeight();
 			var curYear = parseInt($(event.target).attr('year'));
 			var curExp = $(event.target).attr('id');
 			console.log(curYear + '  ' + curExp);
