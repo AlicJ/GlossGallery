@@ -16,7 +16,7 @@ function appendExample(example, whereToAppend){
 						.addClass('info')
 						.append($('<p></p>')
 							.addClass('name')
-							.append(example.name.replace('_', ' '))
+							.append(example.name.replace(/_/g, ' '))
 						)
 						.append($('<p></p>')
 							.addClass('author')
@@ -83,9 +83,22 @@ $(document).ready(function(){
 		countExample ++;
 	}
 	// add credit
-	$(".container").append("<span class=\"contributor\">Buit by \
-		<a href=\"https://github.com/AlicJ\">Zichen Jiang</a>,\
-		 <a href=\"https://github.com/VCL1995\">Chang Liu</a></span>");
+	// $(".container").append("<span class=\"contributor\">Buit by \
+	// 	<a href=\"https://github.com/AlicJ\">Zichen Jiang</a>,\
+	// 	 <a href=\"https://github.com/VCL1995\">Chang Liu</a></span>");
+	$('.container').append($('<span></span>')
+						.addClass('contributor')
+						.append('Created by')
+						.append($('<a></a>')
+							.attr('href', 'http://zichenjiang.me/')
+							.append(' Alic Jiang ')
+						)
+						.append('and')
+						.append($('<a></a>')
+							.attr('href', 'https://github.com/VCL1995')
+							.append(' Chang Liu ')
+						)
+					)
 	// assign dimentison to various markups
 	resize();
 	//hide other pages(subcontainers)

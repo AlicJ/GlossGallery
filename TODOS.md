@@ -3,4 +3,5 @@
 * ~~make the new layout happen~~ Done!
 * ~~make year's clickable, show that year's project~~ Done!
 * ~~add play button overlaying image on individual project page~~ Deleted
-* debug for now
+* issue on phone, looks like js not runnig, yet is enabled
+* repoted that video is not showing properly on phone

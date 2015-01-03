@@ -90,7 +90,7 @@ function sidebarGen() {
 								$.each(yearOfExp.exps, function(index, exp) {
 									$(list)
 										.append($('<li></li>')
-												.append(exp.name.replace('_', ' '))
+												.append(exp.name.replace(/_/g, ' '))
 												.attr('id', exp.name)
 												.addClass('proj-li')
 												.attr({
@@ -109,7 +109,9 @@ function sidebarGen() {
 }
 
 // generate the main gallery icons
-function mainGen(curYear=0) {
+function mainGen(curYear) {
+	curYear = typeof curYear !== 'undefined' ? curYear : 0;
+	// clean up #main and hide it for the fadein effect later on
 	$('#main').html('');
 	$('#main').hide();
 	var yearBlock;
@@ -155,7 +157,7 @@ function projIconGen(yearOfExp) {
 														)
 														.append($('<div></div>')
 															.addClass('name')
-															.append(exp.name.replace('_', ' '))
+															.append(exp.name.replace(/_/g, ' '))
 														)
 										$(html).append(icon);
 									});
@@ -185,7 +187,7 @@ function indivProjGen(target) {
 	proj = proj[0];
 	// console.log(proj);
 	// appending project data
-	$('#main').find('.name h2').html(proj.name.replace('_',' '));
+	$('#main').find('.name h2').html(proj.name.replace(/_/g, ' '));
 	$('#main').find('.author p').html(function(){
 		var string = 'By ';
 		$.each(proj.author, function(index, auth) {
