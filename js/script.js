@@ -23,52 +23,7 @@ $(document).on('click', '.proj-li', function(event) {
 	$('#main').hide();
 	$('#main').load('project.html',
 		function(){
-			// setHeight();
-			var curYear = parseInt($(event.target).attr('year'));
-			var curExp = $(event.target).attr('id');
-			// console.log(curYear + '  ' + curExp);
-			// match the year first
-			var result = $.grep(EXAMPLES, function(e) {
-				return e.year == curYear;
-			});
-			// get the first and only result
-			result = result[0];
-			// console.log(result);
-			// them match the example project
-			var proj = $.grep(result.exps, function(e) {
-				return e.name == curExp;
-			});
-			// get the first and only result
-			proj = proj[0];
-			// console.log(proj);
-			// appending project data
-			$('#main').find('.name h2').html(proj.name.replace('_',' '));
-			$('#main').find('.author p').html(function(){
-				var string = 'By ';
-				$.each(proj.author, function(index, auth) {
-					string += auth;
-					if(index != proj.author.length - 1){
-						string += ', '
-					}
-				});
-				return string;
-			});
-			$('#main').find('.demo a').attr({
-												rel: 'prettyPhoto',
-												href: proj.videoPath
-											});
-			$('#main').find('.demo img').attr({
-												src: proj.imgPath,
-												alt: proj.name
-											});
-			$('#main').find('.file a').attr('href', proj.filePath);
-			// prettyPhoto- pop up video
-			$("a[rel^='prettyPhoto']").prettyPhoto({
-				default_width: 720,
-				default_height: 544,
-				theme: 'pp_default',
-				social_tools: " "
-			});
+			indivProjGen(event.target);
 			$('#main').fadeIn();
 	});
 });
@@ -210,13 +165,52 @@ function projIconGen(yearOfExp) {
 	$('#main').append(yearBlock);
 }
 
-/*
-<div id="HauntedHouse" class="icon">
-	<div class="picture">
-		<img alt="HauntedHouse" src="images/HauntedHouse.png" />
-	</div>
-	<div class="name">
-		HauntedHouse
-	</div>
-</div>
-*/
+function indivProjGen(target) {
+	// setHeight();
+	var curYear = parseInt($(target).attr('year'));
+	var curExp = $(target).attr('id');
+	// console.log(curYear + '  ' + curExp);
+	// match the year first
+	var result = $.grep(EXAMPLES, function(e) {
+		return e.year == curYear;
+	});
+	// get the first and only result
+	result = result[0];
+	// console.log(result);
+	// them match the example project
+	var proj = $.grep(result.exps, function(e) {
+		return e.name == curExp;
+	});
+	// get the first and only result
+	proj = proj[0];
+	// console.log(proj);
+	// appending project data
+	$('#main').find('.name h2').html(proj.name.replace('_',' '));
+	$('#main').find('.author p').html(function(){
+		var string = 'By ';
+		$.each(proj.author, function(index, auth) {
+			string += auth;
+			if(index != proj.author.length - 1){
+				string += ', '
+			}
+		});
+		return string;
+	});
+	$('#main').find('.desc p').html(proj.desc);
+	$('#main').find('.demo a').attr({
+										rel: 'prettyPhoto',
+										href: proj.videoPath
+									});
+	$('#main').find('.demo img').attr({
+										src: proj.imgPath,
+										alt: proj.name
+									});
+	$('#main').find('.file a').attr('href', proj.filePath);
+	// prettyPhoto- pop up video
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+		default_width: 720,
+		default_height: 544,
+		theme: 'pp_default',
+		social_tools: " "
+	});
+}

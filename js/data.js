@@ -15,7 +15,8 @@ var exampleData = [
 		author: 	["Mackenzie Campbell", "Manaar Hyder", "Maya Ramamurthy"],
 		year: 		2013,
 		filePath: 	"2013/HauntedHouse.hs",
-		imgPath: 	"images/2013/Haunted_House.png" 
+		imgPath: 	"images/2013/Haunted_House.png" ,
+		desc: ""
 	},
 	{
 		videoPath:  "http://youtu.be/N49IZIFam4A",
@@ -23,7 +24,8 @@ var exampleData = [
 		author: 	["Ahmed Khan", "Matthew Prior-Coxhead"],
 		year: 		2013,
 		filePath: 	"2013/MovingStar.hs",
-		imgPath: 	"images/2013/Moving_Star.png" 
+		imgPath: 	"images/2013/Moving_Star.png" ,
+		desc: ""
 	},
 	{
 		videoPath:  "http://youtu.be/I0koyAlEcRk",
@@ -31,7 +33,8 @@ var exampleData = [
 		author: 	["Alic Jiang", "Jimmy Wang"],
 		year: 		2013,
 		filePath: 	"2013/Parabolic.hs",
-		imgPath: 	"images/2013/Parabolic.png" 
+		imgPath: 	"images/2013/Parabolic.png" ,
+		desc: "Create sets of straight lines that forms several parabolas"
 	},
 	{
 		videoPath:  "http://youtu.be/yhava85k0mU",
@@ -39,7 +42,8 @@ var exampleData = [
 		author: 	["Trevor Rae", "Katrine Rachitsky", "Paul Warnick", "James Zhu"],
 		year: 		2013,
 		filePath: 	"2013/SolarSystem.hs",
-		imgPath: 	"images/2013/Solar_System.png" 
+		imgPath: 	"images/2013/Solar_System.png" ,
+		desc: ""
 	},
 	{
 		videoPath:  "http://youtu.be/Q-VMyfBazeA",
@@ -47,7 +51,8 @@ var exampleData = [
 		author: 	["Mingfei Jiang"],
 		year: 		2013,
 		filePath: 	"2013/Stare.hs",
-		imgPath: 	"images/2013/Stare.png" 
+		imgPath: 	"images/2013/Stare.png" ,
+		desc: ""
 	},
 	{
 		videoPath:  "http://youtu.be/3Vwze16yHSM",
@@ -55,7 +60,8 @@ var exampleData = [
 		author: 	["Sergio Cosman Agraz"],
 		year: 		2013,
 		filePath: 	"2013/Waves.hs",
-		imgPath: 	"images/2013/Waves.png" 
+		imgPath: 	"images/2013/Waves.png" ,
+		desc: "Create ocean waves (animation)"
 	},
 	{
 		videoPath:  "http://youtu.be/QeDUpSdWP1w",
@@ -63,7 +69,8 @@ var exampleData = [
 		author: 	["Chinthujan Nandakumar", "Yash Patel"],
 		year: 		2013,
 		filePath: 	"2013/Windmills.hs",
-		imgPath: 	"images/2013/Windmills.png" 
+		imgPath: 	"images/2013/Windmills.png" ,
+		desc: ""
 	},
 	{
 		videoPath:  "http://youtu.be/9OeeomwC6LY",
@@ -71,7 +78,8 @@ var exampleData = [
 		author: 	["Xiaomin Bai", "Chang Liu", "Yu Wang"],
 		year: 		2013,
 		filePath: 	"2013/Windows.hs",
-		imgPath: 	"images/2013/Windows.png" 
+		imgPath: 	"images/2013/Windows.png" ,
+		desc: ""
 	},
 	{
 		videoPath:  "http://youtu.be/kfpXWvXM8yA",
@@ -79,7 +87,8 @@ var exampleData = [
 		author: 	["Jonathan Boulanger"],
 		year: 		2014,
 		filePath: 	"2014/BoulangersFractal.hs",
-		imgPath: 	"images/2014/BoulangersFractal.png"
+		imgPath: 	"images/2014/BoulangersFractal.png",
+		desc: ""
 
 	},
 	{
@@ -88,7 +97,8 @@ var exampleData = [
 		author: 	["Anqi Gu", "Chaoyi Kuang", "Xiaoxu Sun"],
 		year: 		2014,
 		filePath: 	"2014/Clock.hs",
-		imgPath: 	"images/2014/Clock.png"
+		imgPath: 	"images/2014/Clock.png",
+		desc: ""
 
 	},
 	{
@@ -97,7 +107,8 @@ var exampleData = [
 		author: 	["Shiyu Luo","Serena Qi"],
 		year: 		2014,
 		filePath: 	"2014/DrAnand.hs",
-		imgPath: 	"images/2014/DrAnand.png"
+		imgPath: 	"images/2014/DrAnand.png",
+		desc: ""
 
 	},
 	{
@@ -106,7 +117,8 @@ var exampleData = [
 		author: 	["Tanya Bouman", "Natasha DeCoste"],
 		year: 		2014,
 		filePath: 	"2014/FinalFrontier.hs",
-		imgPath: 	"images/2014/FinalFrontier.png"
+		imgPath: 	"images/2014/FinalFrontier.png",
+		desc: ""
 
 	},
 	{
@@ -115,7 +127,8 @@ var exampleData = [
 		author: 	["Juan Santana Penner"],
 		year: 		2014,
 		filePath: 	"2014/LinkGlossChallenge.hs",
-		imgPath: 	"images/2014/LinkGlossChallenge.png"
+		imgPath: 	"images/2014/LinkGlossChallenge.png",
+		desc: ""
 
 	},
 	{
@@ -124,7 +137,8 @@ var exampleData = [
 		author: 	["Yunfeng Li", "Yulun Wu"],
 		year: 		2014,
 		filePath: 	"2014/Naruto.hs",
-		imgPath: 	"images/2014/Naruto.png"
+		imgPath: 	"images/2014/Naruto.png",
+		desc: ""
 
 	},
 	{
@@ -133,7 +147,8 @@ var exampleData = [
 		author: 	["Jonathan Boulanger"],
 		year: 		2014,
 		filePath: 	"2014/RotatingClock.hs",
-		imgPath: 	"images/2014/RotatingClock.png"
+		imgPath: 	"images/2014/RotatingClock.png",
+		desc: ""
 
 	},
 	{
@@ -142,7 +157,8 @@ var exampleData = [
 		author: 	["Prakhar Jalan"],
 		year: 		2014,
 		filePath: 	"2014/StickAnimation.hs",
-		imgPath: 	"images/2014/StickAnimation.png"
+		imgPath: 	"images/2014/StickAnimation.png",
+		desc: "This program is a short animation (40 second film) of a boy named Joe."
 
 	},
 	{
@@ -151,7 +167,8 @@ var exampleData = [
 		author: 	["Nicolas Tristani"],
 		year: 		2014,
 		filePath: 	"2014/YinYang.hs",
-		imgPath: 	"images/2014/YinYang.png"
+		imgPath: 	"images/2014/YinYang.png",
+		desc: ""
 
 	}
 
