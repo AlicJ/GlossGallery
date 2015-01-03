@@ -15,6 +15,7 @@ $(document).ready(function() {
 });
 
 // EVENT HANDLERS
+// icon/sidebar listing click event
 $(document).on('click', '.proj-li', function(event) {
 	event.preventDefault();
 	event.stopPropagation();
@@ -25,21 +26,21 @@ $(document).on('click', '.proj-li', function(event) {
 			// setHeight();
 			var curYear = parseInt($(event.target).attr('year'));
 			var curExp = $(event.target).attr('id');
-			console.log(curYear + '  ' + curExp);
+			// console.log(curYear + '  ' + curExp);
 			// match the year first
 			var result = $.grep(EXAMPLES, function(e) {
 				return e.year == curYear;
 			});
 			// get the first and only result
 			result = result[0];
-			console.log(result);
+			// console.log(result);
 			// them match the example project
 			var proj = $.grep(result.exps, function(e) {
 				return e.name == curExp;
 			});
 			// get the first and only result
 			proj = proj[0];
-			console.log(proj);
+			// console.log(proj);
 			// appending project data
 			$('#main').find('.name h2').html(proj.name.replace('_',' '));
 			$('#main').find('.author p').html(function(){
@@ -70,15 +71,20 @@ $(document).on('click', '.proj-li', function(event) {
 			});
 			$('#main').fadeIn();
 	});
-	
 });
-var temp;
+
+// sidebar listing year click event
+$(document).on('click', '.year-li', function(event) {
+	event.preventDefault();
+	var curYear = parseInt($(event.target).attr('year'));
+	mainGen(curYear);
+});
+
+// 
 $(document).on('click', '.icon .picture, icon .picture img, .icon .name', function(event) {
 	event.stopPropagation();
 	$(event.target).parents('.proj-li').click();
 });
-
-
 
 // make #sidebar and #main the same height
 function setHeight() {
@@ -119,8 +125,8 @@ function sidebarGen() {
 	$.each(EXAMPLES, function(index, yearOfExp) {
 		var list = $('<div></div>')
 						.append($('<p></p>')
-							.attr('id', 'y'+yearOfExp.year)
-							.addClass('year')
+							.attr('year', yearOfExp.year)
+							.addClass('year-li year')
 							.append(yearOfExp.year)
 						)
 						.append(
@@ -141,51 +147,67 @@ function sidebarGen() {
 								console.log(list)
 								return list;
 							}
-						)
-		console.log(list)
+						);
+		console.log(list);
 		$('#sidebar').append(list);
 	});
 }
 
 // generate the main gallery icons
-function mainGen() {
+function mainGen(curYear=0) {
+	$('#main').html('');
+	$('#main').hide();
+	var yearBlock;
 	// go through the EXAMPLES list
-	$.each(EXAMPLES, function(index, yearOfExp) {
-		var yearBlock = $('<div></div>')
-						.append($('<h2></h2>')
-							.append(yearOfExp.year)
-						)
-						.append(
-							function() {
-								// generate each icon
-								var html = $('<div></div>');
-								$.each(yearOfExp.exps, function(index, exp) {
-									var icon = $('<div></div>')
-													.attr({
-														id: exp.name,
-														year: exp.year
-													})
-													.addClass('icon proj-li')
-													.append($('<div></div>')
-														.addClass('picture')
-														.append($('<img src="" alt="" />')
-															.attr({
-																src: exp.imgPath,
-																alt: exp.name
-															})
+	if (curYear == 0) {
+		$.each(EXAMPLES, function(index, yearOfExp) {
+			yearBlock = projIconGen(yearOfExp);
+		});
+	}else{
+		var result = $.grep(EXAMPLES, function(e) {
+				return e.year == curYear;
+			});
+		result = result[0];
+		yearBlock = projIconGen(result);
+	}
+	$('#main').fadeIn();
+}
+
+function projIconGen(yearOfExp) {
+	var yearBlock = $('<div></div>')
+							.append($('<h2></h2>')
+								.append(yearOfExp.year)
+							)
+							.append(
+								function() {
+									// generate each icon
+									var html = $('<div></div>');
+									$.each(yearOfExp.exps, function(index, exp) {
+										var icon = $('<div></div>')
+														.attr({
+															id: exp.name,
+															year: exp.year
+														})
+														.addClass('icon proj-li')
+														.append($('<div></div>')
+															.addClass('picture')
+															.append($('<img src="" alt="" />')
+																.attr({
+																	src: exp.imgPath,
+																	alt: exp.name
+																})
+															)
 														)
-													)
-													.append($('<div></div>')
-														.addClass('name')
-														.append(exp.name.replace('_', ' '))
-													)
-									$(html).append(icon);
-								});
-								return html;
-							}
-						)
-		$('#main').append(yearBlock)
-	});
+														.append($('<div></div>')
+															.addClass('name')
+															.append(exp.name.replace('_', ' '))
+														)
+										$(html).append(icon);
+									});
+									return html;
+								}
+							);
+	$('#main').append(yearBlock);
 }
 
 /*

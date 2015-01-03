@@ -1,4 +1,6 @@
-* ~~make example data array of objects, instead of array of arrays~~
-* ~~modify gallery.js to adapt the above change~~
-* ~~make the new layout happen~~
+* ~~make example data array of objects, instead of array of arrays~~ Done!
+* ~~modify gallery.js to adapt the above change~~ Done!
+* ~~make the new layout happen~~ Done!
+* ~~make year's clickable, show that year's project~~ Done!
+* ~~add play button overlaying image on individual project page~~ Deleted
 * debug for now

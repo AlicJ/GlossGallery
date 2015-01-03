@@ -110,7 +110,7 @@ var exampleData = [
 
 	},
 	{
-		videoPath:  "images/2014/LinkGlossChallenge.png",
+		videoPath:  "images/2014/Link_Gloss_Challenge.png",
 		name: 		"Link_Gloss_Challenge",
 		author: 	["Juan Santana Penner"],
 		year: 		2014,
