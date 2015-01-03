@@ -74,7 +74,7 @@ var exampleData = [
 		imgPath: 	"images/2013/Windows.png" 
 	},
 	{
-		videoPath:  "",
+		videoPath:  "http://youtu.be/kfpXWvXM8yA",
 		name: 		"Boulangers_Fractal",
 		author: 	["Jonathan Boulanger"],
 		year: 		2014,
@@ -83,7 +83,7 @@ var exampleData = [
 
 	},
 	{
-		videoPath:  "",
+		videoPath:  "http://youtu.be/H6yEy1ceNlk",
 		name: 		"Clock",
 		author: 	["Anqi Gu", "Chaoyi Kuang", "Xiaoxu Sun"],
 		year: 		2014,
@@ -92,7 +92,7 @@ var exampleData = [
 
 	},
 	{
-		videoPath:  "",
+		videoPath:  "http://youtu.be/VkPMefrnioE",
 		name: 		"DrAnand",
 		author: 	["Shiyu Luo","Serena Qi"],
 		year: 		2014,
@@ -101,7 +101,7 @@ var exampleData = [
 
 	},
 	{
-		videoPath:  "",
+		videoPath:  "http://youtu.be/iJkROXmR-c8",
 		name: 		"Final_Frontier",
 		author: 	["Tanya Bouman", "Natasha DeCoste"],
 		year: 		2014,
@@ -119,7 +119,7 @@ var exampleData = [
 
 	},
 	{
-		videoPath:  "",
+		videoPath:  "http://youtu.be/prh_4PwJm-w",
 		name: 		"Naruto",
 		author: 	["Yunfeng Li", "Yulun Wu"],
 		year: 		2014,
@@ -128,7 +128,7 @@ var exampleData = [
 
 	},
 	{
-		videoPath:  "",
+		videoPath:  "http://youtu.be/KfvWmNvDMO4",
 		name: 		"Rotating_Clock",
 		author: 	["Jonathan Boulanger"],
 		year: 		2014,
@@ -137,7 +137,7 @@ var exampleData = [
 
 	},
 	{
-		videoPath:  "",
+		videoPath:  "http://youtu.be/821ualqiZiY",
 		name: 		"Stick_Animation",
 		author: 	["Prakhar Jalan"],
 		year: 		2014,
@@ -146,7 +146,7 @@ var exampleData = [
 
 	},
 	{
-		videoPath:  "",
+		videoPath:  "http://youtu.be/Ne6VVMpkGqQ",
 		name: 		"Yin_Yang",
 		author: 	["Nicolas Tristani"],
 		year: 		2014,
