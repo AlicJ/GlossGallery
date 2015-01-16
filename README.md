@@ -1,7 +1,7 @@
 Visit [here](http://zichenjiang.me/GlossGallery/) to view the gallery.
 
 This is a gallery that holds the gloss examples made by students from McMaster who were in CompSci 1JC3 in 2013 fall.
-The course is taught by Dr. Anand. The gallery is built upon the request of the professor.
+The course is taught by [Dr. Anand](http://www.cas.mcmaster.ca/~anand/). The gallery is built upon the request of the professor.
 
 The gallery is mobile-friendly, not very IE-friendly though.
 
