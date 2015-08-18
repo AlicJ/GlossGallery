@@ -43,8 +43,24 @@ header a:hover {
 	cursor: pointer;
 }
 
+#sidebar .proj-li.current::before {
+	content: ">";
+	margin-right: 10px;
+}
+
+
+#sidebar .proj-li.current {
+	color: #337ab7;
+	position: relative;
+	left: -20px;
+}
+
 #sidebar .year:hover, #sidebar ul li:hover {
 	color: rgb(76,158,217)
+}
+
+#sidebar .year-li.current {
+	color: #337ab7;
 }
 
 #main h2 {

@@ -22,6 +22,9 @@ $(document).on('click', '.proj-li', function(event) {
 	event.preventDefault();
 	event.stopPropagation();
 	console.log(event.target)
+	$('.year-li.current').removeClass('current');
+	$('.proj-li.current').removeClass('current');
+	$(this).addClass('current');
 	$('#main').hide();
 	$('#main').load('project.html',
 		function(){
@@ -34,6 +37,9 @@ $(document).on('click', '.proj-li', function(event) {
 $(document).on('click', '.year-li', function(event) {
 	event.preventDefault();
 	var curYear = parseInt($(event.target).attr('year'));
+	$('.year-li.current').removeClass('current');
+	$('.proj-li.current').removeClass('current');
+	$(this).addClass('current');
 	mainGen(curYear);
 });
 
