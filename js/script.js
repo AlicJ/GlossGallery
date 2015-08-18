@@ -7,6 +7,8 @@ var EXAMPLES = [];
 // 	...
 // ]
 
+var initCounter = 0;
+
 $(document).ready(function() {
 	genProjs();
 	sidebarGen();
@@ -24,7 +26,7 @@ $(document).on('click', '.proj-li', function(event) {
 	$('#main').load('project.html',
 		function(){
 			indivProjGen(event.target);
-			$('#main').fadeIn();
+			$('#main').fadeIn('fast');
 	});
 });
 
@@ -127,7 +129,12 @@ function mainGen(curYear) {
 		result = result[0];
 		yearBlock = projIconGen(result);
 	}
-	$('#main').fadeIn();
+	if (initCounter == 0) {
+		$('#main').show();
+		initCounter ++;
+	}else{
+		$('#main').fadeIn('fast');
+	}
 }
 
 function projIconGen(yearOfExp) {
