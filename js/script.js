@@ -46,7 +46,9 @@ $(document).on('click', '.year-li', function(event) {
 // 
 $(document).on('click', '.icon .picture, icon .picture img, .icon .name', function(event) {
 	event.stopPropagation();
-	$(event.target).parents('.proj-li').click();
+	var id = $(event.target).parents('.proj-li').attr('id');
+	console.log(id);
+	$("#sidebar #"+id).click();
 });
 
 // make #sidebar and #main the same height
