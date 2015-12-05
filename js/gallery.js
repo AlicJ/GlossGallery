@@ -90,7 +90,7 @@ $(document).ready(function(){
 						.addClass('contributor')
 						.append('Created by')
 						.append($('<a></a>')
-							.attr('href', 'http://zichenjiang.me/')
+							.attr('href', 'http://alicj.github.io/')
 							.append(' Alic Jiang ')
 						)
 						.append('and')
